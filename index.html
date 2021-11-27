@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
   <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="js/choices.min.js"></script>
@@ -17,119 +18,119 @@
   <header class="header">
     <div class="header__top">
       <div class="container header__container">
-        <a class="header__logo aside"><img src="img/logo.png" alt="Логотип"></a>
+        <a class="header__logo aside-left"><img src="img/logo.png" alt="Логотип"></a>
         <nav class="header__nav">
           <ul class="header__nav-list">
-            <li class="header__nav-item"><a class="header__nav-link" href="#">О нас</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Галерея</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Каталог</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">События</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Издания</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Проекты</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link-focus" href="#">О нас</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link-focus" href="#">Галерея</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link-focus" href="#">Каталог</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link-focus" href="#">События</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link-focus" href="#">Издания</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link-focus" href="#">Проекты</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link-focus" href="#">Контакты</a></li>
           </ul>
         </nav>
-        <div class="btn-wrapper aside">
-          <button class="btn-enter">
+        <div class="btn-wrapper aside-right">
+          <a class="btn-enter" href="#">
             <svg class="icon-enter" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"/>
             </svg>
             Войти
-          </button>
+          </a>
         </div>
       </div>
     </div>
     <div class="header__bottom">
       <div class="container header__container">
-        <ul class="header-bottom__list">
-          <li class="header-bottom__item">
-            <button class="header-bottom__item-btn" data-path="one">
-              <strong class="header-bottom__item-heading">Реализм</strong>
-              <span class="header-bottom__item-icon"></span>
+        <ul class="header__bottom-list">
+          <li class="header__bottom-item">
+            <button class="header__bottom-item-btn" data-path="one">
+              <strong class="header__bottom-item-heading">Реализм</strong>
+              <span class="header__bottom-item-icon"></span>
             </button>
-            <div class="header-bottom__dropdown" data-target="one">
-              <div class="header-bottom__dropdown-wrap" data-simplebar>
-                <ul class="header-bottom__drop-list">
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-1-1">Тинторрето</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-1-2">Фридрих</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-1-3">Леонардо</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-1-4">Верроккьо</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-1-5">Траффульдино</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-1-6">Бергамо</a></li>
+            <div class="header__bottom-dropdown" data-target="one">
+              <div class="header__bottom-dropdown-wrap" data-simplebar>
+                <ul class="header__bottom-drop-list">
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-1-1">Тинторрето</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-1-2">Фридрих</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-1-3">Леонардо</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-1-4">Верроккьо</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-1-5">Траффульдино</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-1-6">Бергамо</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="header-bottom__item">
-            <button class="header-bottom__item-btn" data-path="two">
-              <strong class="header-bottom__item-heading">Импрессионизм</strong>
-              <span class="header-bottom__item-icon"></span>
+          <li class="header__bottom-item">
+            <button class="header__bottom-item-btn" data-path="two">
+              <strong class="header__bottom-item-heading">Импрессионизм</strong>
+              <span class="header__bottom-item-icon"></span>
             </button>
-            <div class="header-bottom__dropdown" data-target="two">
-              <div class="header-bottom__dropdown-wrap" data-simplebar>
-                <ul class="header-bottom__drop-list">
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-2-1">Моне</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-2-2">Сислей</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-2-3">Мане</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-2-4">Ренуар</a></li>
+            <div class="header__bottom-dropdown" data-target="two">
+              <div class="header__bottom-dropdown-wrap" data-simplebar>
+                <ul class="header__bottom-drop-list">
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-2-1">Моне</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-2-2">Сислей</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-2-3">Мане</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-2-4">Ренуар</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="header-bottom__item">
-            <button class="header-bottom__item-btn" data-path="three">
-              <strong class="header-bottom__item-heading">Постимпрессионизм</strong>
-              <span class="header-bottom__item-icon"></span>
+          <li class="header__bottom-item">
+            <button class="header__bottom-item-btn" data-path="three">
+              <strong class="header__bottom-item-heading">Постимпрессионизм</strong>
+              <span class="header__bottom-item-icon"></span>
             </button>
-            <div class="header-bottom__dropdown" data-target="three">
-              <div class="header-bottom__dropdown-wrap" data-simplebar>
-                <ul class="header-bottom__drop-list">
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-3-1">Ван Гог</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-3-2">Сезанн</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-3-3">Гоген</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-3-4">Сёра</a></li>
+            <div class="header__bottom-dropdown" data-target="three">
+              <div class="header__bottom-dropdown-wrap" data-simplebar>
+                <ul class="header__bottom-drop-list">
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-3-1">Ван Гог</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-3-2">Сезанн</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-3-3">Гоген</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-3-4">Сёра</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="header-bottom__item">
-            <button class="header-bottom__item-btn" data-path="four">
-              <strong class="header-bottom__item-heading">Авангард</strong>
-              <span class="header-bottom__item-icon"></span>
+          <li class="header__bottom-item">
+            <button class="header__bottom-item-btn" data-path="four">
+              <strong class="header__bottom-item-heading">Авангард</strong>
+              <span class="header__bottom-item-icon"></span>
             </button>
-            <div class="header-bottom__dropdown" data-target="four">
-              <div class="header-bottom__dropdown-wrap" data-simplebar>
-                <ul class="header-bottom__drop-list">
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-4-1">Кандинский</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-4-2">Маринетти</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-4-3">Малевич</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-4-4">Пикассо</a></li>
+            <div class="header__bottom-dropdown" data-target="four">
+              <div class="header__bottom-dropdown-wrap" data-simplebar>
+                <ul class="header__bottom-drop-list">
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-4-1">Кандинский</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-4-2">Маринетти</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-4-3">Малевич</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-4-4">Пикассо</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="header-bottom__item">
-            <button class="header-bottom__item-btn" data-path="five">
-              <strong class="header-bottom__item-heading">Футуризм</strong>
-              <span class="header-bottom__item-icon"></span>
+          <li class="header__bottom-item">
+            <button class="header__bottom-item-btn" data-path="five">
+              <strong class="header__bottom-item-heading">Футуризм</strong>
+              <span class="header__bottom-item-icon"></span>
             </button>
-            <div class="header-bottom__dropdown" data-target="five">
-              <div class="header-bottom__dropdown-wrap" data-simplebar>
-                <ul class="header-bottom__drop-list">
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-5-1">Карра</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-5-2">Прателла</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-5-3">Северини</a></li>
-                  <li class="header-bottom__dropdown-item"><a href="" class="header-bottom__item-link header-bottom__item-5-4">Балла</a></li>
+            <div class="header__bottom-dropdown" data-target="five">
+              <div class="header__bottom-dropdown-wrap" data-simplebar>
+                <ul class="header__bottom-drop-list">
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-5-1">Карра</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-5-2">Прателла</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-5-3">Северини</a></li>
+                  <li class="header__bottom-dropdown-item"><a href="" class="header__bottom-item-link header__bottom-item-5-4">Балла</a></li>
                 </ul>
               </div>
             </div>
           </li>
         </ul>
         <form class="search-form" action="#">
-          <button class="search-form__btn" aria-label="Найти на сайте">
-            <svg width="23" height="22" viewиox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+          <button class="search-form__btn" aria-label="Найти на сайте" tabindex="-1">
+            <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"/>
             </svg>
           </button>
           <input class="search-form__input" type="text" placeholder="Поиск по сайту">
@@ -163,11 +164,11 @@
     </section>
     <section class="section-gallery">
       <div class="container section-gallery__container">
-        <div class="section-galary__content-wrap">
-          <div class="section-galary__left-panel">
-            <h2 class="title white-text section-galary__title">Галерея</h2>
-            <div class="section-galary__filter">
-              <label class="main-text white-text section-galary__label" for="select">Фильтр</label>
+        <div class="section-gallery__content-wrap">
+          <div class="section-gallery__left-panel">
+            <h2 class="title white-text section-gallery__title">Галерея</h2>
+            <div class="section-gallery__filter">
+              <label class="main-text white-text semibold section-gallery__label" for="gallary-filter">Фильтр</label>
               <select name="gallary-filter" id="gallary-filter">
                 <option value="">Живопись</option>
                 <option value="">Рисунок</option>
@@ -175,10 +176,166 @@
               </select>
             </div>
           </div>
-          <div class="section-galary__swiper-panel"></div>
-          <div class="section-galary__note">
-            <div class="section-galary__note-content">
-              <p class="main-text white-text">Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a class="link-autarisation" href="#">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
+          <div class="section-gallery__swiper-panel">
+            <div class="section-gallery__navigation">
+              <button class="nav-btn gallery-prev" aria-label="К предыдущему слайду"></button>
+              <div class="gallery-pagination main-text"></div>
+              <button class="nav-btn gallery-next" aria-label="К следующему слайду"></button>
+            </div>
+            <div class="swiper-container slides-container">
+              <div class="swiper-wrapper">
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-001.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-001.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-002.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-002.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-003.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-003.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-007.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-007.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-008.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-008.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-009.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-009.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-013.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-013.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-014.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-014.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-015.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-015.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-019.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-019.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-020.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-020.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-021.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-021.jpg" alt="">
+                  </picture>
+                </a>
+
+
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-004.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-004.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-005.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-005.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-006.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-006.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-010.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-010.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-011.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-011.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-012.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-012.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-016.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-016.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-017.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-017.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-018.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-018.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-022.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-022.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-023.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-023.jpg" alt="">
+                  </picture>
+                </a>
+                <a class="swiper-slide gallery-slide" href="#">
+                  <picture>
+                    <source srcset="img/Gallery-024.jpg" media="(min-width: 1024px)">
+                    <img class="gallery-image" src="img/Gallery-024.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="section-gallery__note">
+            <div class="section-gallery__note-content">
+              <p class="main-text white-text semibold">Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a class="link-autorisation link-focus" href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией.</p>
             </div>
           </div>
         </div>
@@ -187,6 +344,8 @@
   </main>
   <script src="js/simplebar.js"></script>
   <script src="js/main-choices.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/focus-visible.js"></script>
 </body>
 </html>
