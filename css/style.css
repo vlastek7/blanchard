@@ -1077,13 +1077,13 @@ body {
   padding-right: 50px;
 }
 
-.section-catalog__info {
+/* .section-catalog__info {
   display: none;
 }
 
 .section-catalog__info-active {
   display: block;
-}
+} */
 
 .section-catalog__info-title {
   margin-bottom: 9px;
