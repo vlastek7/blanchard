@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="js/choices.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 </head>
 <body>
   <header class="header">
@@ -162,7 +164,7 @@
         </div>
       </div>
     </section>
-    <section class="section-gallery">
+    <section class="section-gallery" id="section-gallery">
       <div class="container section-gallery__container">
         <div class="section-gallery__content-wrap">
           <div class="section-gallery__left-panel">
@@ -341,11 +343,383 @@
         </div>
       </div>
     </section>
+    <section class="section-catalog">
+      <div class="container section-catalog__container">
+        <div class="section-catalog__header">
+          <h2 class="title section-catalog__title">Каталог</h2>
+          <ul class="section-catalog__btn-list">
+            <li class="section-catalog__btn-item">
+              <button class="section-catalog__tabs-btn section-catalog__tabs-btn-active" data-path="c-one">
+                <img src="img/tab-icon-1.png" alt="">
+              </button>
+            </li>
+            <li class="section-catalog__btn-item">
+              <button class="section-catalog__tabs-btn" data-path="c-two">
+                <img src="img/tab-icon-2.png" alt="">
+              </button>
+            </li>
+            <li class="section-catalog__btn-item">
+              <button class="section-catalog__tabs-btn" data-path="c-three">
+                <img src="img/tab-icon-3.png" alt="">
+              </button>
+            </li>
+            <li class="section-catalog__btn-item">
+              <button class="section-catalog__tabs-btn" data-path="c-four">
+                <img src="img/tab-icon-4.png" alt="">
+              </button>
+            </li>
+            <li class="section-catalog__btn-item">
+              <button class="section-catalog__tabs-btn" data-path="c-five">
+                <img src="img/tab-icon-5.png" alt="">
+              </button>
+            </li>
+          </ul>
+        </div>
+        <p class="main-text section-catalog__descr">
+          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+        </p>
+        <div class="section-catalog__tab-content section-catalog__tab-content-active" data-target="c-one">
+          <div class="section-catalog__panel section-catalog__info-panel">
+            <div class="section-catalog__info section-catalog__info-active" data-target="0001">
+              <div class="section-catalog__pic info-patch__pic">
+                <img class="section-catalog__img" src="img/catalog-domenico-girlandayo.jpg" alt="">
+              </div>
+              <h3 class="sub-title section-catalog__info-title">Доменико Гирландайо</h3>
+              <p class="section-catalog__info-period">2 июня 1448 — 11 января 1494.</p>
+              <p class="main-text section-catalog__info-descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="section-catalog__info" data-target="0002">
+              <div class="section-catalog__pic info-patch__pic">
+                <img class="section-catalog__img" src="img/catalog-benedetto-di-bindo.jpg" alt="">
+              </div>
+              <h3 class="sub-title section-catalog__info-title">Бенедетто ди Биндо</h3>
+              <p class="section-catalog__info-period">ок. 1380—85 — 19 сентября 1417.</p>
+              <p class="main-text section-catalog__info-descr">
+                Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник, так сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь он&nbsp;выполнил ряд весьма престижных заказов, включая работы в&nbsp;Сиенском соборе (работы в&nbsp;главном соборе республики второстепенным художникам не&nbsp;поручались).
+              </p>
+            </div>
+            <div class="section-catalog__info" data-target="none">
+              <div class="info-patch__pic"></div>
+              <h3 class="sub-title info-patch__title">Что мы о нём знаем?</h3>
+              <p class="main-text info-patch__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+            </div>
+          </div>
+          <div class="section-catalog__panel section-catalog__select-panel">
+            <ul class="section-catalog__periods-list js-accordion">
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                    C 1400 по 1499 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <ul class="section-catalog__artist-list">
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist section-catalog__link-artist-active link-focus" data-path="0001">Доменико Гирландайо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0002">Бенедетто ди Биндо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0003">Бергоньоне, Амброджо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0004">Биссоло, Франческо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0005">Больтраффио, Джованни</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0006">Бонсиньори, Франческо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0007">Боттичини, Рафаэлло</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0008">Брамантино</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0009">Бреа, Людовико</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0010">Бьяджо д’Антонио Туччи</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0011">Веккьетта</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0012">Андреа Верроккьо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0013">Беноццо Гоццоли</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0014">Граначчи, Франческо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0015">Грегорио ди Чекко</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0016">Джованни да Удине</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0017">Джованни ди Паоло</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0018">Джорджоне</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0019">Парентино, Бернардо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0020">Пезеллино</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0021">Пьетро Перуджино</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0022">Перуцци, Бальдассаре</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0023">Пизанелло</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0024">Пинтуриккьо</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                    C 1500 по 1599 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                    C 1600 по 1699 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                  C 1700 по 1799 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                  C 1800 по 1899 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                  C 1900 по 1999 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                  C 2000 г.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section-catalog__tab-content" data-target="c-two">
+          <div class="section-catalog__panel section-catalog__info-panel">
+            <div class="section-catalog__info">
+              <div class="info-patch__pic"></div>
+              <h3 class="sub-title info-patch__title">Что мы о нём знаем?</h3>
+              <p class="main-text info-patch__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+            </div>
+          </div>
+          <div class="section-catalog__panel section-catalog__select-panel">
+            <ul class="section-catalog__periods-list js-accordion">
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                    C 1400 по 1499 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                    C 1500 по 1599 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                    C 1600 по 1699 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                  C 1700 по 1799 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                  C 1800 по 1899 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                  C 1900 по 1999 гг.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-catalog__periods-item">
+                <h3 class="sub-title section-catalog__heading link-focus">
+                  C 2000 г.
+                  <svg class="head-icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="head-icon-round" d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z" fill="#ECECEC" stroke="#ECECEC" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="black" />
+                  </svg>
+                </h3>
+                <div class="section-catalog__content">
+                  <div class="patch">
+                    <div class="patch__pic"></div>
+                    <div class="patch__content">
+                      <h3 class="sub-title patch__title">Здесь пока пусто</h3>
+                      <p class="main-text patch__descr">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a class="patch__link link-autorisation link-focus" href="#section-gallery">В галерею</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="js/simplebar.js"></script>
   <script src="js/main-choices.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/focus-visible.js"></script>
+  <script src="js/cat-accordion.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/tabs-accordion.js"></script>
 </body>
 </html>
