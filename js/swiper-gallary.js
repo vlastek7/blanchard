@@ -1,4 +1,4 @@
-let gallerySlider = new Swiper(".slides-container", {
+let gallerySlider = new Swiper(".gallary-slides-container", {
   slidesPerView: 1,
   grid: {
     rows: 1,
@@ -6,12 +6,12 @@ let gallerySlider = new Swiper(".slides-container", {
   },
   spaceBetween: 20,
   pagination: {
-    el: ".section-gallery .gallery-pagination",
+    el: ".section-gallery .swiperr-pagination",
     type: "fraction"
   },
   navigation: {
-    nextEl: ".gallery-next",
-    prevEl: ".gallery-prev"
+    nextEl: ".section-gallery .swiper-next",
+    prevEl: ".section-gallery .swiper-prev"
   },
 
   breakpoints: {

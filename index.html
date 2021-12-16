@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
   <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/perspective.css"/>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="js/choices.min.js"></script>
@@ -27,8 +28,8 @@
             <li class="header__nav-item"><a class="header__nav-link scroll-to link-focus" href="#section-gallery">Галерея</a></li>
             <li class="header__nav-item"><a class="header__nav-link scroll-to link-focus" href="#section-catalog">Каталог</a></li>
             <li class="header__nav-item"><a class="header__nav-link scroll-to link-focus" href="#section-news">События</a></li>
-            <li class="header__nav-item"><a class="header__nav-link scroll-to link-focus" href="#">Издания</a></li>
-            <li class="header__nav-item"><a class="header__nav-link scroll-to link-focus" href="#">Проекты</a></li>
+            <li class="header__nav-item"><a class="header__nav-link scroll-to link-focus" href="#section-pbls">Издания</a></li>
+            <li class="header__nav-item"><a class="header__nav-link scroll-to link-focus" href="#section-projects">Проекты</a></li>
             <li class="header__nav-item"><a class="header__nav-link scroll-to link-focus" href="#">Контакты</a></li>
           </ul>
         </nav>
@@ -129,7 +130,7 @@
           </li>
         </ul>
         <form class="search-form" action="#">
-          <button class="search-form__btn" aria-label="Найти на сайте" tabindex="-1">
+          <button class="search-form__btn" aria-label="Найти на сайте">
             <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"/>
@@ -180,11 +181,11 @@
           </div>
           <div class="section-gallery__swiper-panel">
             <div class="section-gallery__navigation">
-              <button class="nav-btn gallery-prev" aria-label="К предыдущему слайду"></button>
-              <div class="gallery-pagination main-text"></div>
-              <button class="nav-btn gallery-next" aria-label="К следующему слайду"></button>
+              <button class="nav-btn swiper-prev" aria-label="К предыдущему слайду"></button>
+              <div class="swiperr-pagination main-text"></div>
+              <button class="nav-btn swiper-next" aria-label="К следующему слайду"></button>
             </div>
-            <div class="swiper-container slides-container">
+            <div class="swiper-container gallary-slides-container">
               <div class="swiper-wrapper">
                 <a class="swiper-slide gallery-slide" href="#">
                   <picture>
@@ -380,8 +381,28 @@
         </p>
         <div class="section-catalog__tab-content section-catalog__tab-content-active" data-target="c-one">
           <div class="section-catalog__panel section-catalog__info-panel">
-            <div class="section-catalog__info">
-              <div class="section-catalog__pic info-patch__pic">
+            <div class="section-catalog__info section-catalog__info-active" data-artist-target = "0001">
+              <div class="section-catalog__patch-pic">
+                <img class="section-catalog__img" src="img/catalog-Andrea_del_Verrocchio.jpg" alt="">
+              </div>
+              <h3 class="sub-title section-catalog__info-title">Андреа Верроккьо</h3>
+              <p class="section-catalog__info-period">1435 — 10 октября 1488.</p>
+              <p class="main-text section-catalog__info-descr">
+                Андреа дель Верроккьо родился и&nbsp;работал во&nbsp;Флоренции. Своё имя (del Verrocchio&nbsp;&mdash; &laquo;от&nbsp;Верроккьо&raquo;), он&nbsp;получил от&nbsp;своего учителя, ювелира Верроккьо. Специализировался на&nbsp;скульптуре, но&nbsp;также обращался и&nbsp;к&nbsp;живописи. В&nbsp;эпоху Раннего Возрождения художники работали почти исключительно по&nbsp;заказам, поэтому в&nbsp;то&nbsp;время была велика роль меценатов. Эта практика особенно распространилась во&nbsp;Флоренции XV&nbsp;века, где художественные мастерские осуществляли любые заказы покровителей&nbsp;&mdash; от&nbsp;росписи посуды до&nbsp;архитектурных проектов. Верроккьо считался непревзойденным декоратором и&nbsp;режиссёром придворных празднеств.
+              </p>
+            </div>
+            <div class="section-catalog__info" data-artist-target = "0002">
+              <div class="section-catalog__patch-pic">
+                <img class="section-catalog__img" src="img/catalog-benedetto-di-bindo.jpg" alt="">
+              </div>
+              <h3 class="sub-title section-catalog__info-title">Бенедетто ди Биндо</h3>
+              <p class="section-catalog__info-period">ок. 1380—85 — 19 сентября 1417.</p>
+              <p class="main-text section-catalog__info-descr">
+                Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник, так сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь он&nbsp;выполнил ряд весьма престижных заказов, включая работы в&nbsp;Сиенском соборе (работы в&nbsp;главном соборе республики второстепенным художникам не&nbsp;поручались). Обучение он&nbsp;прошёл у&nbsp;Таддео ди&nbsp;Бартоло, крупного сиенского мастера поздней готики, в&nbsp;боттеге которого Бенедетто трудился вместе с&nbsp;Грегорио ди&nbsp;Чекко. Наибольшее влияние на&nbsp;его творчество оказали работы Симоне Мартини, в&nbsp;частности в&nbsp;выборе колорита, а&nbsp;тонко проработанные лица его персонажей напоминают произведения Джованни да&nbsp;Милано.
+              </p>
+            </div>
+            <div class="section-catalog__info" data-artist-target = "0018">
+              <div class="section-catalog__patch-pic">
                 <img class="section-catalog__img" src="img/catalog-domenico-girlandayo.jpg" alt="">
               </div>
               <h3 class="sub-title section-catalog__info-title">Доменико Гирландайо</h3>
@@ -389,6 +410,12 @@
               <p class="main-text section-catalog__info-descr">
                 Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
               </p>
+            </div>
+            <div class="section-catalog__info" data-artist-target = "none">
+              <div class="section-catalog__patch-pic"></div>
+              <h3 class="sub-title section-catalog__patch-title">Что мы о нём знаем?</h3>
+              <p class="main-text section-catalog__patch-descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <a class="patch__link scroll-to link-autorisation link-focus" href="#section-gallery">В галерею</a>
             </div>
           </div>
           <div class="section-catalog__panel section-catalog__select-panel">
@@ -403,30 +430,30 @@
                 </h3>
                 <div class="section-catalog__content">
                   <ul class="section-catalog__artist-list">
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist section-catalog__link-artist-active link-focus" data-path="0001">Доменико Гирландайо</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0002">Бенедетто ди Биндо</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0003">Бергоньоне, Амброджо</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0004">Биссоло, Франческо</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0005">Больтраффио, Джованни</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0006">Бонсиньори, Франческо</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0007">Боттичини, Рафаэлло</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0008">Брамантино</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0009">Бреа, Людовико</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0010">Бьяджо д’Антонио Туччи</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0011">Веккьетта</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0012">Андреа Верроккьо</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0013">Беноццо Гоццоли</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0014">Граначчи, Франческо</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0015">Грегорио ди Чекко</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0016">Джованни да Удине</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0017">Джованни ди Паоло</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0018">Джорджоне</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0019">Парентино, Бернардо</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0020">Пезеллино</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0021">Пьетро Перуджино</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0022">Перуцци, Бальдассаре</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0023">Пизанелло</a></li>
-                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-path="0024">Пинтуриккьо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus section-catalog__link-artist-active" data-artist_path="0001" href="#!">Андреа Верроккьо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0002" href="#!">Бенедетто ди Биндо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0003" href="#!">Бергоньоне, Амброджо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0004" href="#!">Биссоло, Франческо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0005" href="#!">Больтраффио, Джованни</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0006" href="#!">Бонсиньори, Франческо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0007" href="#!">Боттичини, Рафаэлло</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0008" href="#!">Брамантино</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0009" href="#!">Бреа, Людовико</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0010" href="#!">Бьяджо д’Антонио Туччи</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0011" href="#!">Беноццо Гоццоли</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0012" href="#!">Веккьетта</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0013" href="#!">Граначчи, Франческо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0014" href="#!">Грегорио ди Чекко</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0015" href="#!">Джованни да Удине</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0016" href="#!">Джованни ди Паоло</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0017" href="#!">Джорджоне</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0018" href="#!">Доменико Гирландайо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0019" href="#!">Парентино, Бернардо</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0020" href="#!">Пезеллино</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0021" href="#!">Пьетро Перуджино</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0022" href="#!">Перуцци, Бальдассаре</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0023" href="#!">Пизанелло</a></li>
+                    <li class="section-catalog__artist-item"><a class="main-text section-catalog__link-artist link-focus" data-artist_path="0024" href="#!">Пинтуриккьо</a></li>
                   </ul>
                 </div>
               </li>
@@ -550,9 +577,9 @@
         <div class="section-catalog__tab-content" data-target="c-two">
           <div class="section-catalog__panel section-catalog__info-panel">
             <div class="section-catalog__info">
-              <div class="info-patch__pic"></div>
-              <h3 class="sub-title info-patch__title">Что мы о нём знаем?</h3>
-              <p class="main-text info-patch__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <div class="section-catalog__patch-pic"></div>
+              <h3 class="sub-title section-catalog__patch-title">Что мы о нём знаем?</h3>
+              <p class="main-text section-catalog__patch-descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
               <a class="patch__link scroll-to link-autorisation link-focus" href="#section-gallery">В галерею</a>
             </div>
           </div>
@@ -697,9 +724,9 @@
         <div class="section-catalog__tab-content" data-target="c-three">
           <div class="section-catalog__panel section-catalog__info-panel">
             <div class="section-catalog__info">
-              <div class="info-patch__pic"></div>
-              <h3 class="sub-title info-patch__title">Что мы о нём знаем?</h3>
-              <p class="main-text info-patch__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <div class="section-catalog__patch-pic"></div>
+              <h3 class="sub-title section-catalog__patch-title">Что мы о нём знаем?</h3>
+              <p class="main-text section-catalog__patch-descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
               <a class="patch__link scroll-to link-autorisation link-focus" href="#section-gallery">В галерею</a>
             </div>
           </div>
@@ -844,9 +871,9 @@
         <div class="section-catalog__tab-content" data-target="c-four">
           <div class="section-catalog__panel section-catalog__info-panel">
             <div class="section-catalog__info">
-              <div class="info-patch__pic"></div>
-              <h3 class="sub-title info-patch__title">Что мы о нём знаем?</h3>
-              <p class="main-text info-patch__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <div class="section-catalog__patch-pic"></div>
+              <h3 class="sub-title section-catalog__patch-title">Что мы о нём знаем?</h3>
+              <p class="main-text section-catalog__patch-descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
               <a class="patch__link scroll-to link-autorisation link-focus" href="#section-gallery">В галерею</a>
             </div>
           </div>
@@ -991,9 +1018,9 @@
         <div class="section-catalog__tab-content" data-target="c-five">
           <div class="section-catalog__panel section-catalog__info-panel">
             <div class="section-catalog__info">
-              <div class="info-patch__pic"></div>
-              <h3 class="sub-title info-patch__title">Что мы о нём знаем?</h3>
-              <p class="main-text info-patch__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <div class="section-catalog__patch-pic"></div>
+              <h3 class="sub-title section-catalog__patch-title">Что мы о нём знаем?</h3>
+              <p class="main-text section-catalog__patch-descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
               <a class="patch__link scroll-to link-autorisation link-focus" href="#section-gallery">В галерею</a>
             </div>
           </div>
@@ -1146,8 +1173,8 @@
               <source srcset="img/news-500-1.jpg" media="(min-width: 1024px)">
               <img class="section-news__item-image" src="img/news-500-1.jpg" alt="">
             </picture>
-            <p class="section-news__caption">Музей им. Щусева</p>
-            <p class="section-news__caption">с 20 марта по 30 апреля</p>
+            <span class="section-news__caption">Музей им. Щусева</span>
+            <span class="section-news__caption">с 20 марта по 30 апреля</span>
             <div class="section-news__content flex">
               <h3 class="sub-title section-news__item-title">Книжная гравюра в&nbsp;живом восприятии</h3>
               <p class="main-text section-news__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
@@ -1159,8 +1186,8 @@
               <source srcset="img/news-500-2.jpg" media="(min-width: 1024px)">
               <img class="section-news__item-image" src="img/news-500-2.jpg" alt="">
             </picture>
-            <p class="section-news__caption">ММОМА</p>
-            <p class="section-news__caption">24 марта 19:00</p>
+            <span class="section-news__caption">ММОМА</span>
+            <span class="section-news__caption">24 марта 19:00</span>
             <div class="section-news__content flex">
               <h3 class="sub-title section-news__item-title">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
               <p class="main-text section-news__descr">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
@@ -1172,8 +1199,8 @@
               <source srcset="img/news-500-3.jpg" media="(min-width: 1024px)">
               <img class="section-news__item-image" src="img/news-500-3.jpg" alt="">
             </picture>
-            <p class="section-news__caption">Еврейский музей</p>
-            <p class="section-news__caption">с 31 марта по 21 апреля</p>
+            <span class="section-news__caption">Еврейский музей</span>
+            <span class="section-news__caption">с 31 марта по 21 апреля</span>
             <div class="section-news__content flex">
               <h3 class="sub-title section-news__item-title">Выставка &laquo;Формация 2020&raquo;</h3>
               <p class="main-text section-news__descr">Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.</p>
@@ -1185,8 +1212,8 @@
               <source srcset="img/news-500-4.jpg" media="(min-width: 1024px)">
               <img class="section-news__item-image" src="img/news-500-4.jpg" alt="">
             </picture>
-            <p class="section-news__caption">Третьяковка на Крымском валу</p>
-            <p class="section-news__caption">с 30 марта по 30 апреля</p>
+            <span class="section-news__caption">Третьяковка на Крымском валу</span>
+            <span class="section-news__caption">с 30 марта по 30 апреля</span>
             <div class="section-news__content flex">
               <h3 class="sub-title section-news__item-title">XXIV Международная биеннале молодого искусства</h3>
               <p class="main-text section-news__descr">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
@@ -1198,8 +1225,8 @@
               <source srcset="img/news-500-5.jpg" media="(min-width: 1024px)">
               <img class="section-news__item-image" src="img/news-500-5.jpg" alt="">
             </picture>
-            <p class="section-news__caption">ММАМ</p>
-            <p class="section-news__caption">с 8 апреля по 20 мая</p>
+            <span class="section-news__caption">ММАМ</span>
+            <span class="section-news__caption">с 8 апреля по 20 мая</span>
             <div class="section-news__content flex">
               <h3 class="sub-title section-news__item-title">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;</h3>
               <p class="main-text section-news__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
@@ -1207,8 +1234,281 @@
             </div>
           </li>
         </ul>
-        <div class="section-news__btn-wrapper is-active">
-          <button class="btn section-news__btn-more">Все события</button>
+        <button class="btn section-news__btn-more is-active">Все события</button>
+      </div>
+    </section>
+    <section class="section-pbls" id="section-pbls">
+      <div class="container section-pbls__container">
+        <div class="flex section-pbls__content-wrap">
+          <div class="section-pbls__left-panel">
+            <h2 class="title white-text section-pbls__title">Издания</h2>
+            <form action="#!" class="section-pbls__filter">
+              <fieldset class="section-pbls__form-fieldset">
+                <legend class="main-text white-text section-pbls__legend">Категории</legend>
+                <ul class="section-pbls__list">
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="bestsellers">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Бестселлеры</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="art">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Искусство</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="architecture">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Архитектура</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="design">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Дизайн</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="fashion">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Мода</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="for-children">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Детям</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="fiction">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Художественная литература</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="publicism">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Публицистика</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="guides">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Путеводители</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="philosophy">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Философия</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="edlit">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Учебная литература</span>
+                    </label>
+                  </li>
+                  <li class="section-pbls__check-item">
+                    <label class="main-text white-text section-pbls__check-label">
+                      <input class="section-pbls__check" type="checkbox" name="mgzs-nwsps">
+                      <span class="section-pbls__checkbox"></span>
+                      <span class="section-pbls__heading">Журналы и газеты</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="section-pbls__form-fieldset">
+                <legend class="main-text white-text section-pbls__legend section-pbls__price-legend">Цена</legend>
+                <ul class="flex section-pbls__price-list">
+                  <li class="section-pbls__price-item">
+                    <span class="main-text white-text section-pbls__price-label">От</span><input class="main-text white-text section-pbls__price-input" name="price_start" type="text" placeholder="50"/>
+                  </li>
+                  <li class="section-pbls__price-item">
+                    <span class="main-text white-text section-pbls__price-label">до</span><input class="main-text white-text section-pbls__price-input" name="price_end" type="text" placeholder="25 000"/>
+                  </li>
+                  <li class="section-pbls__price-item">
+                    <span class="main-text white-text section-pbls__price-label">руб.</span>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+          </div>
+          <div class="section-pbls__swiper-panel">
+            <div class="section-pbls__navigation">
+              <button class="nav-btn swiper-prev" aria-label="К предыдущему слайду"></button>
+              <div class="swiperr-pagination main-text"></div>
+              <button class="nav-btn swiper-next" aria-label="К следующему слайду"></button>
+            </div>
+            <div class="swiper-container pbls-slides-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide section-pbls__slide">
+                  <picture>
+                    <source srcset="img/pbls-1920-01.jpg" media="(min-width: 1024px)">
+                    <img class="section-pbls__image" src="img/pbls-1920-01.jpg" alt="">
+                  </picture>
+                  <div class="section-pbls__slide-content">
+                    <h3 class="main-text white-text section-pbls__slide-title">Искусство цвета</h3>
+                    <span class="main-text white-text section-pbls__slide-price">620 руб</span>
+                    <span class="main-text white-text section-pbls__slide-autor">Иттен, Иоханнес</span>
+                  </div>
+                  <a class="btn white-text section-pbls__slide-link" href="#!">Заказать</a>
+                </div>
+                <div class="swiper-slide section-pbls__slide">
+                  <picture>
+                    <source srcset="img/pbls-1920-02.jpg" media="(min-width: 1024px)">
+                    <img class="section-pbls__image" src="img/pbls-1920-02.jpg" alt="">
+                  </picture>
+                  <div class="section-pbls__slide-content">
+                    <h3 class="main-text white-text section-pbls__slide-title">Типографика</h3>
+                    <span class="main-text white-text section-pbls__slide-price">2 450 руб</span>
+                    <span class="main-text white-text section-pbls__slide-autor">Рудер, Эмиль</span>
+                  </div>
+                  <a class="btn white-text section-pbls__slide-link" href="#!">Заказать</a>
+                </div>
+                <div class="swiper-slide section-pbls__slide">
+                  <picture>
+                    <source srcset="img/pbls-1920-03.jpg" media="(min-width: 1024px)">
+                    <img class="section-pbls__image" src="img/pbls-1920-03.jpg" alt="">
+                  </picture>
+                  <div class="section-pbls__slide-content">
+                    <h3 class="main-text white-text section-pbls__slide-title">Книга про буквы</h3>
+                    <span class="main-text white-text section-pbls__slide-price">2 200 руб</span>
+                    <span class="main-text white-text section-pbls__slide-autor">Гордон, Юрий</span>
+                  </div>
+                  <a class="btn white-text section-pbls__slide-link" href="#!">Заказать</a>
+                </div>
+                <div class="swiper-slide section-pbls__slide">
+                  <picture>
+                    <source srcset="img/pbls-1920-04.jpg" media="(min-width: 1024px)">
+                    <img class="section-pbls__image" src="img/pbls-1920-04.jpg" alt="">
+                  </picture>
+                  <div class="section-pbls__slide-content">
+                    <h3 class="main-text white-text section-pbls__slide-title">Николай Ильин</h3>
+                    <span class="main-text white-text section-pbls__slide-price">1 100 руб</span>
+                    <span class="main-text white-text section-pbls__slide-autor">Кричевский, Владимир</span>
+                  </div>
+                  <a class="btn white-text section-pbls__slide-link" href="#!">Заказать</a>
+                </div>
+                <div class="swiper-slide section-pbls__slide">
+                  <picture>
+                    <source srcset="img/pbls-1920-05.jpg" media="(min-width: 1024px)">
+                    <img class="section-pbls__image" src="img/pbls-1920-05.jpg" alt="">
+                  </picture>
+                  <div class="section-pbls__slide-content">
+                    <h3 class="main-text white-text section-pbls__slide-title">Модульные сетки в граф...</h3>
+                    <span class="main-text white-text section-pbls__slide-price">1 450 руб</span>
+                    <span class="main-text white-text section-pbls__slide-autor">Мюллер-Брокманн, Йозеф </span>
+                  </div>
+                  <a class="btn white-text section-pbls__slide-link" href="#!">Заказать</a>
+                </div>
+                <div class="swiper-slide section-pbls__slide">
+                  <picture>
+                    <source srcset="img/pbls-1920-06.jpg" media="(min-width: 1024px)">
+                    <img class="section-pbls__image" src="img/pbls-1920-06.jpg" alt="">
+                  </picture>
+                  <div class="section-pbls__slide-content">
+                    <h3 class="main-text white-text section-pbls__slide-title">Эволюция графических ст...</h3>
+                    <span class="main-text white-text section-pbls__slide-price">3 200 руб</span>
+                    <span class="main-text white-text section-pbls__slide-autor">Хеллер, Чваст</span>
+                  </div>
+                  <a class="btn white-text section-pbls__slide-link" href="#!">Заказать</a>
+                </div>
+                <div class="swiper-slide section-pbls__slide">
+                  <picture>
+                    <source srcset="img/pbls-1920-07.jpg" media="(min-width: 1024px)">
+                    <img class="section-pbls__image" src="img/pbls-1920-07.jpg" alt="">
+                  </picture>
+                  <div class="section-pbls__slide-content">
+                    <h3 class="main-text white-text section-pbls__slide-title">Искусство и визуальное в...</h3>
+                    <span class="main-text white-text section-pbls__slide-price">2 200 руб</span>
+                    <span class="main-text white-text section-pbls__slide-autor">Арнхейм, Рудольф </span>
+                  </div>
+                  <a class="btn white-text section-pbls__slide-link" href="#!">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-projects" id="section-projects">
+      <div class="container section-projects__container">
+        <div class="section-projects__content">
+          <h2 class="title section-projects__title">Проекты</h2>
+          <p class="main-text section-projects__descr">
+            Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="mark-tooltip" data-tippy-content="Пример современных тенденций - современная методология разработки" tabindex="0"></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="mark-tooltip" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции" tabindex="0"></span> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых <span class="mark-tooltip" data-tippy-content="В стремлении повысить качество" tabindex="0"></span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: <a class="link-autorisation link-focus section-projects__link" href="#!" target="_blank">blanchard-art.ru/projects/about</a>
+          </p>
+        </div>
+        <h3 class="sub-title section-projects__subtitle">Партнёры проектов:</h3>
+        <div class="section-projects__swiper-container">
+          <div class="swiper-container section-projects__slides-container">
+            <button class="nav-btn section-projects__nav-btn section-projects__swiper-prev" aria-label="К предыдущему слайду"></button>
+            <button class="nav-btn section-projects__nav-btn section-projects__swiper-next" aria-label="К следующему слайду"></button>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-01.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img" src="img/partner-1920-01.png" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-02.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img" src="img/partner-1920-02.png" alt="">
+                </picture>
+              </div><div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-03.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img" src="img/partner-1920-03.png" alt="">
+                </picture>
+              </div><div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-04.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img" src="img/partner-1920-04.png" alt="">
+                </picture>
+              </div><div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-05.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img" src="img/partner-1920-05.png" alt="">
+                </picture>
+              </div><div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-06.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img" src="img/partner-1920-06.png" alt="">
+                </picture>
+              </div><div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-07.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img" src="img/partner-1920-07.png" alt="">
+                </picture>
+              </div><div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-08.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img" src="img/partner-1920-08.png" alt="">
+                </picture>
+              </div><div class="swiper-slide flex section-projects__slide">
+                <picture>
+                  <source srcset="img/partner-1920-09.png" media="(min-width: 1024px)">
+                  <img class="section-projects__img shape-img" src="img/partner-1920-09.png" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1217,11 +1517,16 @@
   <script src="js/simplebar.js"></script>
   <script src="js/main-choices.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/swiper.js"></script>
+  <script src="js/swiper-gallary.js"></script>
+  <script src="js/swiper-pbls.js"></script>
+  <script src="js/swiper-projects.js"></script>
   <script src="js/focus-visible.js"></script>
   <script src="js/cat-accordion.js"></script>
   <script src="js/tabs.js"></script>
   <script src="js/tabs-accordion.js"></script>
   <script src="js/news.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="js/project-tooltip.js"></script>
 </body>
 </html>

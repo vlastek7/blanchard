@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   $( ".js-accordion" ).accordion({
       collapsible: true,
-      active: false,
+      active: 0,
       icons: false,
       heightStyle: 'content'
     });

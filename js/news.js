@@ -4,6 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
       newsContent.classList.remove('is-active')
       newsContent.classList.add('is-active')
     })
-    document.querySelector('.section-news__btn-wrapper').classList.remove('is-active')
+    document.querySelector('.section-news__btn-more').classList.remove('is-active')
   })
 })
