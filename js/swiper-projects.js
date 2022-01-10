@@ -20,10 +20,18 @@ let projectsSlider = new Swiper(".section-projects__slides-container", {
       grid: {
         rows: 1
       },
-      spaceBetween: 30
+      spaceBetween: 34
     },
 
-    1200: {
+    851: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 50
+    },
+
+    1400: {
       slidesPerView: 3,
       grid: {
         rows: 1

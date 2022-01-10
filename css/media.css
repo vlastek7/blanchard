@@ -1,0 +1,562 @@
+@media (max-width: 1200px) {
+  /* Catalog */
+  .section-catalog__artist-list {
+    column-count: 2;
+  }
+
+  /* Contacts */
+  .section-contacts__contacts {
+    width: calc(650 / 1600 * 100%);
+  }
+
+  .section-contacts__map {
+    width: calc(950 / 1600 * 100% + ((100vw - 100%) / 2));
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .header__top {
+    position: relative;
+    padding: 28px 0;
+  }
+
+  .header__bottom-list {
+    display: none;
+  }
+
+  .header__bottom {
+    padding: 0;
+    background: none;
+  }
+
+  .header__container {
+    justify-content: center;
+  }
+
+
+  .header__nav {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 768px;
+    top: 0;
+    left: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 96px;
+    padding-bottom: 50px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    transform: translateX(-101%);
+    transition: transform .3s ease-in-out;
+  }
+
+  .header__nav.is-menu-open {
+    transform: none;
+  }
+
+  .header__nav-list{
+    display: block;
+    margin-bottom: 131px;
+  }
+
+  .header__nav-link {
+    font-size: 24px;
+    line-height: 64px;
+  }
+
+  .header__burger {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 11;
+    width: 36px;
+    height: 28px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .burger__rect {
+    width: 36px;
+    height: 3px;
+    background-color: var(--light);
+    transition: transform;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  .rect-1 {
+    transform-origin: 0 50%;
+    transform: rotate(45deg) translateY(-1px);
+  }
+
+  .rect-2 {
+    width: 28px;
+    transform: translateX(200px) scaleY(0);
+  }
+
+  .rect-3 {
+    transform-origin: 0 50%;
+    transform: rotate(-45deg);
+  }
+
+  .rect-3.is-burger {
+    width: 24px;
+  }
+
+  .is-burger {
+    transform: none;
+  }
+
+  .aside-right {
+    flex: none;
+  }
+
+  .btn-enter {
+    padding: 16px 90px;
+    border: 2px solid var(--accident-03);
+    border-radius: 50px;
+  }
+
+  .search-form {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #18171B;
+  }
+
+  .search-form__btn svg {
+    width: 30px;
+    height: 28px;
+  }
+
+  .search-form__input::placeholder {
+    color: transparent;
+  }
+
+  /* Hero */
+  .section-hero {
+    min-height: 768px;
+  }
+
+  .section-hero__container {
+    padding-top: 212px;
+    padding-bottom: 114px;
+  }
+
+  .stction-hero__img {
+    background: url("../img/hero-1024-1.jpg") center center no-repeat var(--main);
+  }
+
+  .section-hero__content {
+    max-width: 660px;
+  }
+
+  .section-hero__title {
+    margin-bottom: 10px;
+  }
+
+  .section-hero__descr {
+    margin-bottom: 133px;
+  }
+
+  /* Gallery */
+  .section-gallery {
+    margin-bottom: 88px;
+    background: url("../img/gallary-1024.jpg") center center no-repeat var(--main);
+    background-size: cover;
+  }
+
+  .section-gallery__left-panel, .section-gallery__note {
+    width: calc(280 / 924 * 100%);
+}
+
+  .section-gallery__swiper-panel {
+    width: calc(594 / 924 * 100%);
+    padding-top: 24px;
+  }
+
+  /* Catalog */
+  .section-catalog__content-wrap {
+    justify-content: space-between;
+  }
+
+  .section-catalog__panel {
+    flex: 0 0 calc(50% - 25px);
+  }
+
+  .section-catalog__info-panel {
+    padding-right: 0;
+  }
+
+  .section-catalog__header {
+    margin-bottom: 5px;
+}
+
+  .section-catalog__title {
+    padding-bottom: 20px;
+}
+
+  .section-catalog__patch-pic {
+    background: url("../img/artist-patch-1024.png") no-repeat center center var(--gallery);
+  }
+
+  /* News */
+  .section-news__content {
+    padding: 5px 33px 100px;
+  }
+
+  .section-news__item {
+    min-height: 685px;
+    margin-bottom: 50px;
+  }
+
+  .section-news__item-image {
+    margin-bottom: 15px;
+  }
+
+  .section-news__link {
+    left: 34px;
+    bottom: 51px;
+  }
+
+  /* Publications */
+  .section-pbls {
+    background: url("../img/publication-bg-1024.jpg") center center no-repeat var(--main);
+    background-size: cover;
+  }
+
+  .section-pbls__container {
+    padding-bottom: 80px;
+}
+
+  .section-pbls__left-panel {
+    width: calc(295 / 924 * 100%);
+  }
+
+  .section-pbls__swiper-panel {
+    width: calc(629 / 924 * 100%);
+  }
+
+  .section-pbls__slide-content {
+    padding-bottom: 41px;
+  }
+
+  .section-pbls__image {
+    margin-bottom: 13px;
+  }
+
+  /* Projects */
+  .section-projects__slides-container {
+    width: calc(100% - 106px);
+  }
+
+  .section-projects__slide {
+    height: 128px;
+  }
+
+  .section-projects__img {
+    transform: scale(0.85);
+  }
+
+  /* Contacts */
+  .section-contacts__contacts {
+    width: calc(437 / 924 * 100%);
+  }
+
+  .section-contacts__map {
+    width: calc(487 / 924 * 100% + ((100vw - 100%) / 2));
+  }
+
+  .section-contacts__input {
+    width: calc(100% - 102px);
+  }
+
+  .section-contacts__social-item,
+  .footer__social-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .section-contacts__social-link svg,
+  .footer__social-link svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+}
+
+
+
+@media (max-width: 850px) {
+  .search-form {
+    justify-content: flex-end;
+    align-items: center;
+    height: 99%;
+    background-color: var(--dark);
+    z-index: 15;
+  }
+
+  .search-form__close-btn {
+    transform: translate(4px, -3px);
+    opacity: .7;
+  }
+
+  .search-form__rect {
+    width: 0px;
+    height: 2px;
+    background-color: var(--light);
+    transform-origin: 45%;
+    transition-property: width;
+    transition: .3s ease;
+  }
+
+  .search-form__rect-1.is-active-close {
+    transform: rotate(45deg);
+  }
+
+  .search-form__rect-2.is-active-close {
+    transform: rotate(-45deg);
+  }
+
+  .is-active-close {
+    width: 36px;
+  }
+
+  .search-form__input {
+    margin: 0;
+    width: 0;
+    transition: width .3s ease;
+  }
+
+  .search-form__input--is-active {
+    margin: 0 9px;
+    width: calc(100vw - 184px);
+  }
+
+  /* Gallery */
+  .section-gallery__container {
+    padding-bottom: 68px;
+}
+
+  .section-gallery__content-wrap {
+    flex-direction: column;
+  }
+
+  .section-gallery__left-panel,
+  .section-gallery__swiper-panel,
+  .section-gallery__note {
+    width: 100%;
+  }
+
+  .section-gallery__swiper-panel {
+    margin-bottom: 34px;
+  }
+
+  .section-gallery__note,
+  .section-gallery__note-content {
+    position: initial;
+  }
+
+  .section-gallery__note-text {
+    font-weight: 400;
+  }
+
+  .section-gallery__filter {
+    width: 280px;
+    margin-bottom: 24px;
+  }
+
+  .choices__list--dropdown {
+    background-color: var(--dark);
+    z-index: 10;
+  }
+
+  .gallery-slide::before {
+    padding-top: calc(88% - 6px);
+  }
+
+  /* Catalog */
+  .section-catalog {
+    margin-bottom: 71px;
+  }
+
+  .section-catalog__btn-item:not(:last-child) {
+    margin-bottom: 12px;
+    margin-right: 49px;
+  }
+
+  .section-catalog__content-wrap {
+    flex-direction: column-reverse;
+  }
+
+  .section-catalog__descr {
+    margin-bottom: 21px;
+  }
+
+  .section-catalog__panel {
+    flex: none;
+    width: 100%;
+  }
+
+  .section-catalog__artist-list {
+    column-count: 3;
+  }
+
+  /* News */
+  .section-news__list {
+    margin-bottom: 16px;
+  }
+
+  .section-news__item {
+    flex: 0 1 calc(50% - 17px);
+    min-height: 683px;
+    margin-bottom: 34px;
+    margin-right: 0;
+  }
+
+  .section-news__item:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+
+  .section-news__item:not(:nth-child(2n)) {
+    margin-right: 34px;
+  }
+
+  .section-news__item-image {
+    margin-bottom: 11px;
+  }
+
+  /* Publications */
+  .section-pbls__container {
+    padding-top: 84px;
+    padding-bottom: 75px;
+  }
+
+  .section-pbls__content-wrap {
+    flex-direction: column;
+  }
+
+  .section-pbls__left-panel,
+  .section-pbls__swiper-panel {
+    width: 100%;
+  }
+
+  .section-pbls__list {
+    column-count: 3;
+  }
+
+  .section-pbls__navigation {
+    padding-top: 47px;
+    padding-left: 0px;
+  }
+
+  .pbls-slides-container {
+    margin-right: max(calc((100% - 614px) / 2), 0px);
+    margin-left: max(calc((100% - 619px) / 2), 0px);
+
+  }
+
+  /* news */
+  .is-active-1024 {
+    display: none;
+  }
+
+  .is-active-768 {
+    display: block;
+  }
+
+  /* projects */
+  .section-projects__content {
+    margin-bottom: 26px;
+  }
+
+  .section-projects__subtitle {
+    margin-bottom: 29px;
+  }
+
+  .section-projects__slide {
+    height: 106px;
+  }
+
+  /* Contacts */
+  .section-contacts__contacts {
+    width: calc(380 / 668 * 100%);
+  }
+
+  .section-contacts__map {
+    width: calc(288 / 668 * 100% + ((100vw - 100%) / 2));
+  }
+
+  .section-contacts__input {
+    width: calc(100% - 45px);
+  }
+
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 767px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  /* Hero */
+  .stction-hero__img {
+    background: url("../img/hero-768-1.jpg") center center no-repeat var(--main);
+  }
+
+  .section-hero__content {
+    max-width: 100%;
+  }
+
+  .section-hero__title {
+    font-size: calc(10vw - 4.8px);
+    line-height: 1.2;
+  }
+
+  /* Gallery */
+  .section-gallery {
+    background: url("../img/gallary-768.jpg") center center no-repeat var(--main);
+  }
+
+  /* Catalog */
+  .section-catalog__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-catalog__btn-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .section-catalog__btn-list {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .section-catalog__artist-list {
+    column-count: 2;
+}
+
+  /* Publications */
+  .section-pbls {
+    background: url("../img/publication-bg-768.jpg") center center no-repeat var(--main);
+    background-size: cover;
+  }
+}
+

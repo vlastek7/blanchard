@@ -20,7 +20,7 @@ let gallerySlider = new Swiper(".gallary-slides-container", {
       grid: {
         rows: 2
       },
-      spaceBetween: 30
+      spaceBetween: 34
     },
 
     1200: {

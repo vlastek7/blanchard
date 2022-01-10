@@ -20,7 +20,15 @@ let pblsSlider = new Swiper(".pbls-slides-container", {
       grid: {
         rows: 1
       },
-      spaceBetween: 30
+      spaceBetween: 34
+    },
+
+    851: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 49
     },
 
     1200: {

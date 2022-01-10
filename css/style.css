@@ -80,6 +80,13 @@ img {
   max-width: 100%;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 html {
   font-family: 'Open Sans', sans-serif;
   background: var(--light);
@@ -169,6 +176,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .header__top {
@@ -187,29 +195,31 @@ body {
   align-items: center;
 }
 
-.aside-left {
-  flex: 0 0 200px;
+.header__burger{
+  display: none;
 }
 
-.aside-right {
-  flex: 0 2 200px;
+.aside-left {
+  width: 200px;
+  flex-shrink: 0;
 }
 
 .header__nav {
   display: flex;
-  justify-content: center;
-  flex: 0 1 1200px;
+  justify-content: space-between;
+  flex: 0 1 clamp(1000px, 78%, 1247px);
 }
 
 .header__nav-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 896px;
+  width: clamp(670px, 65vw, 896px);
 }
 
 .header__nav-item:not(:last-child) {
-  margin-right: 62px;
+  margin-right: auto;
+
 }
 
 .header__nav-link {
@@ -247,11 +257,6 @@ body {
 
 .header__nav-link:active {
   color: var(--accident-01);
-}
-
-.btn-wrapper {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .btn-enter {
@@ -312,6 +317,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  flex: 0 1 clamp(700px, 64.7%, 1035px);
 }
 
 .header__bottom-item {
@@ -321,7 +328,7 @@ body {
 }
 
 .header__bottom-item:not(:last-child) {
-  margin-right: 97px;
+  margin-right: auto;
 }
 
 .header__bottom-item-heading {
@@ -613,7 +620,6 @@ body {
 }
 
 .search-form__btn {
-  margin-right: 9px;
   outline: none;
   line-height: 0;
   cursor: pointer;
@@ -633,6 +639,7 @@ body {
 .search-form__input {
   width: 218px;
   padding: 0;
+  margin-left: 9px;
   background: transparent;
   outline: none;
   border: none;
@@ -664,12 +671,40 @@ body {
 
 /* Hero */
 .section-hero {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   min-height: 800px;
   margin-bottom: 80px;
+}
+
+.stction-hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: url("../img/hero-1920-1.jpg") center center no-repeat var(--main);
   background-size: cover;
+  z-index: -1;
+  animation: scale-bg 10s ease-in-out infinite;
 }
+
+
+@keyframes scale-bg {
+  0% {
+      transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .section-hero__container {
   padding-top: 239px;
@@ -722,7 +757,6 @@ body {
 /* Gallery */
 .section-gallery {
   width: 100%;
-  min-height: 995px;
   margin-bottom: 88px;
   background: url("../img/gallary-1920.jpg") center center no-repeat var(--main);
   background-size: cover;
@@ -762,7 +796,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 835px;
 }
 
 .section-gallery__left-panel,
@@ -942,14 +975,14 @@ body {
 
 .swiper-next::before {
   left: calc(50% - 9px / 2);
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-top: 1px solid var(--light);
+  border-right: 1px solid var(--light);
 }
 
 .swiper-prev::before {
   left: calc(50% - 4px / 2);
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-left: 1px solid var(--light);
+  border-bottom: 1px solid var(--light);
 }
 
 .gallery-slide {
@@ -1197,8 +1230,9 @@ body {
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 42px 120px 42px 0;
+  padding: 41px 120px 41px 0;
   font-size: 24px;
+  line-height: 31px;
   border-bottom: 1px solid transparent;
   outline: none;
   cursor: pointer;
@@ -1417,10 +1451,18 @@ body {
   display: block;
 }
 
+.is-active-1024 {
+  display: block;
+}
+
+.is-active-768 {
+  display: block;
+}
+
 /* Publications */
 .section-pbls {
   width: 100%;
-  min-height: 763px;
+  /* min-height: 763px; */
   margin-bottom: 80px;
   background: url("../img/publication-bg-1920.jpg") center center no-repeat var(--main);
   background-size: cover;
@@ -1668,6 +1710,10 @@ margin-bottom: 27px;
   margin-bottom: 17px;
 }
 
+.section-projects__link {
+  font-weight: 600;
+}
+
 .section-projects__link.link-focus::after {
   right: -8px;
   left: -8px;
@@ -1912,7 +1958,7 @@ margin-bottom: 27px;
 
 .section-contacts__input {
   display: block;
-  width: 400px;
+  width: calc(100% - min(122px, 7.1vw));
   height: 40px;
   padding-left: 24px;
   margin-bottom: 23px;
