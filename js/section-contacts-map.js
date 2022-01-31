@@ -17,20 +17,15 @@ function init() {
       zoomControlPosition: { top: "250px", right: "20px" }
     }
   );
-  var myCircle = new ymaps.Circle([
-    [55.758175357498054,37.600796698817625],
-    50
-    ], {},
-    {
-      draggable: false,
-      fillColor: "#9D5CD0",
-      strokeColor: "#FFFFFF",
-      strokeWidth: 1
-    });
 
+  var myPlacemark = new ymaps.Placemark([55.758175357498054,37.600796698817625 ], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/mark.svg',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-10, -10]
+  });
 
-
-  myMap.geoObjects.add(myCircle);
+  myMap.geoObjects.add(myPlacemark);
 
   setTimeout(() => {
     myMap.container.fitToViewport();
