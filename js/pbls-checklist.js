@@ -10,4 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     })
   })
+
+  document.querySelectorAll('.section-pbls__check-item').forEach(function (checkLabel) {
+    checkLabel.addEventListener('click', function(event) {
+      const evtTarget = event.target
+      if(evtTarget.nodeName == 'INPUT') {
+        const isCatClose = document.querySelector('.section-pbls__legend-top').classList.contains('is-close-cat')
+        if(isCatClose) {
+          // console.log(evtTarget)
+          this.classList.add('is-close')
+        }
+      }
+    })
+  })
 })

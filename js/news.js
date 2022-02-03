@@ -1,5 +1,5 @@
 const MOBILE_WIDTH = 544;
-const DESKTOP_WIDTH = 768;
+const DESKTOP_WIDTH = 851;
 const btn = document.querySelector(".section-news__btn-more");
 
 const sliderMobileParams = {
@@ -31,7 +31,7 @@ function activateMobileSlider(params) {
 
   params.cardsSlider = new Swiper(`.${params.cardsContainerName}`, {
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 34,
     pagination: {
       el: `.${params.cardsContainerName} .${params.paginationClassName}`
     },

@@ -14,11 +14,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
-  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-  <script src="js/choices.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
 </head>
 <body>
   <header class="header">
@@ -145,7 +140,7 @@
           </li>
         </ul>
         <button class="search-btn search-btn-open" aria-label="Открыть форму поиска">
-          <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="29" height="28" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"/>
           </svg>
@@ -153,16 +148,21 @@
         <form class="search-form" action="#">
           <!-- <div class="search-form__content-wrap"> -->
             <button class="search-btn search-btn-submit" type="submit" aria-label="Найти на сайте">
-              <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="29" height="28" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"/>
               </svg>
             </button>
             <input class="search-form__input" type="search" placeholder="Поиск по сайту">
-            <div class="search-form__close-btn ">
+            <button class="search-form__close-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewbox="0 0 24 24">
+                <path d="M 2 2 L 22 22 M 22 2 L 2 22" stroke-width="3"></path>
+              </svg>
+            </button>
+            <!-- <div class="search-form__close-btn ">
               <div class="search-form__rect search-form__rect-1"></div>
               <div class="search-form__rect search-form__rect-2"></div>
-            </div>
+            </div> -->
           <!-- </div> -->
         </form>
       </div>
@@ -1312,8 +1312,8 @@
                 <ul class="section-pbls__list">
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="bestsellers">
+                      <label class="main-text white-text section-pbls__check-label" for="bestsellers">
+                        <input class="section-pbls__check" type="checkbox" name="bestsellers" id="bestsellers">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Бестселлеры</span>
                         <span class="close"></span>
@@ -1322,8 +1322,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="art">
+                      <label class="main-text white-text section-pbls__check-label" for="art">
+                        <input class="section-pbls__check" type="checkbox" name="art" id="art">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Искусство</span>
                         <span class="close"></span>
@@ -1332,8 +1332,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="architecture">
+                      <label class="main-text white-text section-pbls__check-label" for="architecture">
+                        <input class="section-pbls__check" type="checkbox" name="architecture" id="architecture">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Архитектура</span>
                         <span class="close"></span>
@@ -1342,8 +1342,8 @@
                   </li>
                   <li class="section-pbls__check-item">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="design" checked>
+                      <label class="main-text white-text section-pbls__check-label" for="design">
+                        <input class="section-pbls__check" type="checkbox" name="design" checked id="design">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Дизайн</span>
                         <span class="close"></span>
@@ -1352,8 +1352,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="fashion">
+                      <label class="main-text white-text section-pbls__check-label" for="fashion">
+                        <input class="section-pbls__check" type="checkbox" name="fashion" id="fashion">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Мода</span>
                         <span class="close"></span>
@@ -1362,8 +1362,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="for-children">
+                      <label class="main-text white-text section-pbls__check-label" for="for-children">
+                        <input class="section-pbls__check" type="checkbox" name="for-children" id="for-children">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Детям</span>
                         <span class="close"></span>
@@ -1372,8 +1372,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="fiction">
+                      <label class="main-text white-text section-pbls__check-label" for="fiction">
+                        <input class="section-pbls__check" type="checkbox" name="fiction" id="fiction">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Художественная литература</span>
                         <span class="close"></span>
@@ -1382,8 +1382,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="publicism">
+                      <label class="main-text white-text section-pbls__check-label" for="publicism">
+                        <input class="section-pbls__check" type="checkbox" name="publicism" id="publicism">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Публицистика</span>
                         <span class="close"></span>
@@ -1392,8 +1392,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="guides">
+                      <label class="main-text white-text section-pbls__check-label" for="guides">
+                        <input class="section-pbls__check" type="checkbox" name="guides" id="guides">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Путеводители</span>
                         <span class="close"></span>
@@ -1402,8 +1402,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="philosophy">
+                      <label class="main-text white-text section-pbls__check-label" for="philosophy">
+                        <input class="section-pbls__check" type="checkbox" name="philosophy" id="philosophy">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Философия</span>
                         <span class="close"></span>
@@ -1412,8 +1412,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="edlit">
+                      <label class="main-text white-text section-pbls__check-label" for="edlit">
+                        <input class="section-pbls__check" type="checkbox" name="edlit" id="edlit">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Учебная литература</span>
                         <span class="close"></span>
@@ -1422,8 +1422,8 @@
                   </li>
                   <li class="section-pbls__check-item is-close">
                     <div class="section-pbls__wrap-check-item">
-                      <label class="main-text white-text section-pbls__check-label">
-                        <input class="section-pbls__check" type="checkbox" name="mgzs-nwsps">
+                      <label class="main-text white-text section-pbls__check-label" for="mgzs-nwsps">
+                        <input class="section-pbls__check" type="checkbox" name="mgzs-nwsps" id="mgzs-nwsps">
                         <span class="section-pbls__checkbox"></span>
                         <span class="section-pbls__heading">Журналы и газеты</span>
                         <span class="close"></span>
@@ -1553,7 +1553,7 @@
         <div class="section-projects__content">
           <h2 class="title section-projects__title">Проекты</h2>
           <p class="main-text section-projects__descr">
-            Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="mark-tooltip" data-tippy-content="Пример современных тенденций - современная методология разработки" tabindex="0" aria-label="Пример современных тенденций - современная методология разработки" ></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="mark-tooltip" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции" tabindex="0" aria-label="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"></span> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых <span class="mark-tooltip" data-tippy-content="В стремлении повысить качество" tabindex="0" aria-label="В стремлении повысить качество"></span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: <a class="link-autorisation link-focus section-projects__link" href="#!" target="_blank">blanchard-art.ru/projects/about</a>
+            Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button class="mark-tooltip" data-tippy-content="Пример современных тенденций - современная методология разработки" tabindex="0" aria-label="Пример современных тенденций - современная методология разработки" ></button> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button class="mark-tooltip" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции" tabindex="0" aria-label="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"></button> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых <button class="mark-tooltip" data-tippy-content="В стремлении повысить качество" tabindex="0" aria-label="В стремлении повысить качество"></button> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: <a class="link-autorisation link-focus section-projects__link" href="#!" target="_blank">blanchard-art.ru/projects/about</a>
           </p>
         </div>
         <h3 class="sub-title section-projects__subtitle">Партнёры проектов:</h3>
@@ -1689,6 +1689,7 @@
       <a class="footer__logo">
         <picture>
           <source srcset="img/logo-320.png" media="(max-width: 360px)">
+          <source srcset="img/logo.png" media="(max-width: 768px)">
           <source srcset="img/logo-1024.png" media="(max-width: 1024px)">
           <img class="footer__logo-img" src="img/logo.png" alt="Логотип">
         </picture>
@@ -1720,6 +1721,11 @@
       </ul>
     </div>
   </footer>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="js/choices.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/just-validate.min.js"></script>
   <script src="js/inputmask.min.js"></script>
   <script src="js/scroll.js"></script>
