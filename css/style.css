@@ -488,7 +488,7 @@ body {
 
 .header__bottom-dropdown-wrap {
   width: 240px;
-  height: 220px;
+  max-height: 220px;
 }
 
 .header__bottom-dropdown.is-active {

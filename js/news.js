@@ -33,7 +33,8 @@ function activateMobileSlider(params) {
     slidesPerView: 1,
     spaceBetween: 34,
     pagination: {
-      el: `.${params.cardsContainerName} .${params.paginationClassName}`
+      el: `.${params.cardsContainerName} .${params.paginationClassName}`,
+      clickable: true
     },
 
     on: {
